@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Rookie | Fanpage</title>
+    <style>
+        /* CSS Variablen für einfaches Anpassen */
+        :root {
+            --primary: #0a192f;
+            --secondary: #172a45;
+            --accent: #f0a500; /* LAPD Gold */
+            --text: #e6f1ff;
+            --text-dim: #8892b0;
+            --police-blue: #002d72;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--primary);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        header {
+            height: 60vh;
+            background: linear-gradient(rgba(10, 25, 47, 0.7), rgba(10, 25, 47, 1)),
+                        url('https://images.unsplash.com/photo-1560177118-42240bc7cbe8?q=80&w=2070&auto=format&fit=crop') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-bottom: 4px solid var(--accent);
+        }
+
+        h1 {
+            font-size: 4rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .badge {
+            background-color: var(--accent);
+            color: black;
+            padding: 5px 15px;
+            font-weight: bold;
+            border-radius: 4px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1000px;
+            margin: -50px auto 50px;
+            padding: 20px;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--secondary);
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 5px solid var(--accent);
+            box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        .character-list {
+            list-style: none;
+        }
+
+        .character-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(136, 146, 176, 0.2);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .character-list li span {
+            color: var(--text-dim);
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-dim);
+            font-size: 0.8rem;
+            border-top: 1px solid var(--secondary);
+        }
+
+        /* Animation für die Liste */
+        .fade-in {
+            animation: fadeIn 1.2s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive Anpassung */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="badge">Mid-Wilshire Division</div>
+    <h1 class="fade-in">THE ROOKIE</h1>
+    <p>To Protect and to Serve</p>
+</header>
+
+<main>
+    <div class="card-grid">
+        <!-- Story Card -->
+        <section class="card fade-in">
+            <h2>Die Handlung</h2>
+            <p>
+                John Nolan, ein Mann Mitte vierzig, beschließt nach einem einschneidenden Erlebnis, seinen Traum zu verwirklichen: 
+                Er zieht nach Los Angeles, um Polizist beim LAPD zu werden. Als ältester Rookie der Truppe muss er sich 
+                gegen Skepsis und die Gefahren des Alltags behaupten.
+            </p>
+        </section>
+
+        <!-- Characters Card -->
+        <section class="card fade-in">
+            <h2>Wichtige Charaktere</h2>
+            <ul class="character-list">
+                <li>John Nolan <span>Nathan Fillion</span></li>
+                <li>Angela Lopez <span>Alyssa Diaz</span></li>
+                <li>Wade Grey <span>Richard T. Jones</span></li>
+                <li>Tim Bradford <span>Eric Winter</span></li>
+                <li>Lucy Chen <span>Melissa O'Neil</span></li>
+            </ul>
+        </section>
+
+        <!-- Status Card -->
+        <section class="card fade-in" style="grid-column: 1 / -1;">
+            <h2>Einsatzbereit</h2>
+            <p>Diese Seite ist bereit für dein GitHub Repository. Lade sie einfach als <code>index.html</code> hoch und aktiviere "Pages" in den Einstellungen.</p>
+            <p style="margin-top: 10px; color: var(--accent);">Status: Code 4 - No further assistance required.</p>
+        </section>
+    </div>
+</main>
+
+<footer>
+    &copy; 2026 Fan-Projekt | Erstellt für GitHub Pages
+</footer>
+
+</body>
+</html>
